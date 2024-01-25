@@ -1,0 +1,16 @@
+<p><%= @list.name %></p>
+
+<h1>My list</h1>
+<% @list.bookmarks.each do |bookmark| %>
+<ul>
+<li>
+<h4> <%= bookmark.comment %></h4>
+</li>
+<li>
+<p><%= link_to"Delete", bookmark_path(bookmark) %></p>
+</li>
+</ul>
+
+<% end %>
+
+<p><%= link_to"Go back to the full list", lists_path %></p>

@@ -1,0 +1,21 @@
+
+<div class="banner" >
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
+
+<h1>My list</h1>
+
+<% @lists.each do |list| %>
+
+<ul>
+<li>
+<h4> <%= link_to list.name, list_path(list) %></h4>
+</li>
+</ul>
+
+<% end %>
