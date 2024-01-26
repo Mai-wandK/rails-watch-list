@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_25_102045) do
     t.bigint "list_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["list_id"], name: "index_bookmarks_on_list_id"
+    t.index ["list_id"], "index_bookmarks_on_list_id"
     t.index ["movie_id"], name: "index_bookmarks_on_movie_id"
   end
 

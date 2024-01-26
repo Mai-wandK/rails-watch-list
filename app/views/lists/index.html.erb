@@ -1,11 +1,11 @@
 
 <div class="banner" >
   <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+    <h1>Save <strong>any</strong> kind <strong>movies with Prime</strong>!</h1>
+    <p>Effortlessly Organize, Discover, and Enjoy Your Movie Collection with Prime - Where Every Film Finds its Place.</p>
   </div>
 </div>
+
 
 
 <h1>My list</h1>
@@ -17,5 +17,28 @@
 <h4> <%= link_to list.name, list_path(list) %></h4>
 </li>
 </ul>
-
 <% end %>
+
+
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+    Breakfast
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+    Lunch
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+    Dinner
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<button type="button" class="btn btn-primary">Add a new list<p><%= link_to ("Add a new List"), new_list_path %></p></button>
