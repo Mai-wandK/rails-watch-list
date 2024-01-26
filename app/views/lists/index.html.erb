@@ -1,7 +1,7 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+ <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="" />
+      <%= image_tag "logo.png" %>
 </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -13,7 +13,7 @@
             <a class="nav-link" href="#">My list</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">New list</a>
+            <a class="nav-link" href="#">New</a>
           </li>
           <li class="nav-item dropdown">
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -29,6 +29,7 @@
   </div>
 </div>
 
+
 <div class="banner" >
   <div class="container">
     <h1>Save <strong>any</strong> kind <strong>movies with Prime</strong>!</h1>
@@ -42,7 +43,7 @@
 <div class="cards">
 <% @lists.each do |list| %>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(list.photo.key, height: 300, width: 400, crop: :fill) %>)">
       <h4> <%= link_to list.name, list_path(list) %></h4>
     </div>
 <% end %>
