@@ -1,3 +1,9 @@
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+
+
+
+
+
 <p><%= @list.name %></p>
 
 <h1>My list</h1>
@@ -7,10 +13,11 @@
 <h4> <%= bookmark.comment %></h4>
 </li>
 <li>
-<p><%= link_to"Delete", bookmark_path(bookmark) %></p>
+<p><%= link_to"Delete", bookmark_path(bookmark),
+data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
 </li>
 </ul>
 
 <% end %>
-
+<p><%= link_to"Add a movie",new_list_bookmark_path(@list, @bookmark)  %></p>
 <p><%= link_to"Go back to the full list", lists_path %></p>
